@@ -38,4 +38,8 @@ public class SistemaBanco {
 
     }
 
+    public String toString() {
+        return "Numero da Conta: " + numeroConta + ", " + "Nome: " + nome + ", " + "Saldo: " + saldo;
+    }
+
 }

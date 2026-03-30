@@ -15,7 +15,7 @@ public class Banco {
         System.out.println(" BANCO DE MINAS ");
         System.out.println("================");
 
-        System.out.print("Entre com o numero da sua conta(8 digitos):");
+        System.out.print("Entre com o numero da sua conta(4 digitos):");
         int numeroConta = sc.nextInt();
         sc.nextLine();
         System.out.print("Digite seu nome: ");
@@ -32,25 +32,20 @@ public class Banco {
         } else {
             banco = new SistemaBanco(nome, numeroConta);
         }
-        System.out
-                .println("Número da conta: " + banco.getNumeroConta() + ", " + "Nome: " + banco.getNome() + ", "
-                        + "Saldo: "
-                        + banco.getSaldo());
+        System.out.println("Dados da conta:" + banco.toString());
         System.out.println("Digite um valor para depositar: ");
         double deposito = sc.nextDouble();
         banco.deposito1(deposito);
 
         System.out.println("Dados da conta atualizados: ");
-        System.out.println("Numero da conta: " + banco.getNumeroConta() + ", " + "Nome: " + banco.getNome() + ", "
-                + "Saldo: " + banco.getSaldo());
+        System.out.println(banco.toString());
 
         System.out.println("Digite um valor para sacar: ");
         double saque = sc.nextDouble();
         banco.saque1(saque);
         System.out.println("Dados da conta atualizados: ");
-        System.out.println("Numero da conta: " + banco.getNumeroConta() + ", " + "Nome: " + banco.getNome() + ", "
-                + "Saldo: " + banco.getSaldo());
-
+        System.out.println(banco.toString());
+        sc.close();
     }
 
 }
